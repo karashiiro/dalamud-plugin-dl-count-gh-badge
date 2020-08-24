@@ -1,0 +1,7 @@
+org: karashiiro
+app: dalamud-plugin-dl-count-gh-badge
+component: express
+name: app
+
+inputs:
+  src: ./
