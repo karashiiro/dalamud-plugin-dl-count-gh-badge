@@ -23,7 +23,6 @@ app.get('/:PluginName', async (req, res) => {
     color: "brightgreen",
   };
 
-  
   res.send(format);
 });
 
