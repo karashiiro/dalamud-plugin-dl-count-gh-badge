@@ -6,7 +6,6 @@ const express = require("express");
 const app = express();
 
 const getDownloadCounts = bent("https://raw.githubusercontent.com/goatcorp/DalamudPlugins/master/downloadcounts.json", "json");
-const logo = "https://raw.githubusercontent.com/karashiiro/dalamud-plugin-dl-count-gh-badge/master/logo.svg";
 
 // Routes
 app.get('/:PluginName', async (req, res) => {
@@ -21,8 +20,7 @@ app.get('/:PluginName', async (req, res) => {
     schemaVersion: 1,
     label: "Downloads",
     message: `${count}`,
-    color: "green",
-    logo,
+    color: "brightgreen",
   };
 
   
