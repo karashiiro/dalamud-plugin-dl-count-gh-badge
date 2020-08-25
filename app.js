@@ -18,7 +18,7 @@ app.get('/:PluginName', async (req, res) => {
   
   const format = {
     schemaVersion: 1,
-    label: "Downloads",
+    label: "downloads",
     message: `${count}`,
     color: "brightgreen",
   };
