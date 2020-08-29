@@ -21,6 +21,7 @@ app.get('/:PluginName', async (req, res) => {
     label: "downloads",
     message: `${count}`,
     color: "brightgreen",
+    cacheSeconds: 3600,
   };
 
   res.send(format);
