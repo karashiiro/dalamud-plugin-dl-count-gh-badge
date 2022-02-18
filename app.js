@@ -5,15 +5,15 @@ const express = require("express");
 
 const app = express();
 
-const getDownloadCounts = bent("https://raw.githubusercontent.com/goatcorp/DalamudPlugins/master/downloadcounts.json", "json");
+const getDownloadCounts = bent("https://raw.githubusercontent.com/goatcorp/DalamudPlugins/api5/downloadcounts.json", "json");
 
 // Routes
-app.get('/:PluginName', async (req, res) => {
+app.get('/:pluginName', async (req, res) => {
   const downloadCounts = await getDownloadCounts();
 
   let count = 0;
-  if (downloadCounts[req.params.PluginName]) {
-    count = downloadCounts[req.params.PluginName].count;
+  if (downloadCounts[req.params.pluginName]) {
+    count = downloadCounts[req.params.pluginName].count;
   }
   
   const format = {
@@ -30,7 +30,7 @@ app.get('/:PluginName', async (req, res) => {
 // Error handler
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(500).send('Internal Serverless Error');
+  res.status(500).send("Internal Serverless Error");
 });
 
 module.exports = app;
