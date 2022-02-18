@@ -13,7 +13,7 @@ app.get('/:pluginName', async (req, res) => {
 
   let count = 0;
   if (downloadCounts[req.params.pluginName]) {
-    count = downloadCounts[req.params.pluginName].count;
+    count = parseInt(downloadCounts[req.params.pluginName]);
   }
   
   const format = {
