@@ -19,7 +19,7 @@ app.get('/:pluginName', async (req, res) => {
   const format = {
     schemaVersion: 1,
     label: "downloads",
-    message: `${count}`,
+    message: `${count.toLocaleString("en")}`,
     color: "brightgreen",
     cacheSeconds: 3600,
   };
