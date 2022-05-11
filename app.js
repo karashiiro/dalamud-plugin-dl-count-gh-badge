@@ -5,7 +5,7 @@ const express = require("express");
 
 const app = express();
 
-const getDownloadCounts = bent("https://raw.githubusercontent.com/goatcorp/DalamudPlugins/api5/downloadcounts.json", "json");
+const getDownloadCounts = bent("https://raw.githubusercontent.com/goatcorp/DalamudPlugins/master/downloadcounts.json", "json");
 
 // Routes
 app.get('/:pluginName', async (req, res) => {
