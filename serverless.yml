@@ -1,7 +1,15 @@
 org: karashiiro
 app: dalamud-plugin-dl-count-gh-badge
-component: express
-name: app
+service: dalamud-plugin-dl-count-gh-badge
+frameworkVersion: '3'
 
-inputs:
-  src: ./
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    url: true
+    events:
+      - httpApi: '*'

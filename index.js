@@ -2,6 +2,7 @@
 
 const bent = require("bent");
 const express = require("express");
+const serverless = require("serverless-http");
 
 const app = express();
 
@@ -33,4 +34,4 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal Serverless Error");
 });
 
-module.exports = app;
+module.exports.handler = serverless(app);
